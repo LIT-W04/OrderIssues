@@ -1,0 +1,34 @@
+﻿@model OrderIssues.Web.Models.ViewIssuesViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <button class="btn btn-primary btn-block new-issue">New Issue</button>
+        <div class="issues-div" data-order-id="@Model.OrderId">
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">New Issue</h4>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control" rows="10" id="note" placeholder="Note..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary save-note">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+@section scripts
+{
+    <script src="/Scripts/view-issues.js"></script>
+}
